@@ -24,7 +24,7 @@ const connectToDatabase = async () => {
 
 // Only start the server if this file is executed directly
 if (require.main === module) {
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || '0.0.0.0';
   connectToDatabase().then(() => {
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
